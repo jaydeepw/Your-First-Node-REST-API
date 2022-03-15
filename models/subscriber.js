@@ -9,10 +9,6 @@ const loanSchema = new mongoose.Schema({
     type: Number,
     required: false
   },
-  subscribedToChannel: {
-    type: String,
-    required: false
-  },
   subscribeDate: {
     type: Date,
     required: true,
@@ -20,4 +16,4 @@ const loanSchema = new mongoose.Schema({
   }
 })
 
-module.exports = mongoose.model('LoanV3', loanSchema)
+module.exports = mongoose.model('LoanV4', loanSchema)
