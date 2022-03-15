@@ -1,9 +1,13 @@
 const mongoose = require('mongoose')
 
-const subscriberSchema = new mongoose.Schema({
+const loanSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true
+  },
+  amount: {
+    type: Number,
+    required: false
   },
   subscribedToChannel: {
     type: String,
@@ -16,4 +20,4 @@ const subscriberSchema = new mongoose.Schema({
   }
 })
 
-module.exports = mongoose.model('Subscriber', subscriberSchema)
+module.exports = mongoose.model('Loan', loanSchema)
