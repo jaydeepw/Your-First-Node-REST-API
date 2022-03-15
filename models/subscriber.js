@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const loanSchema = new mongoose.Schema({
-  name: {
+  loanTitle: {
     type: String,
     required: true
   },
@@ -11,7 +11,7 @@ const loanSchema = new mongoose.Schema({
   },
   subscribedToChannel: {
     type: String,
-    required: true
+    required: false
   },
   subscribeDate: {
     type: Date,
@@ -20,4 +20,4 @@ const loanSchema = new mongoose.Schema({
   }
 })
 
-module.exports = mongoose.model('Loan', loanSchema)
+module.exports = mongoose.model('LoanV3', loanSchema)

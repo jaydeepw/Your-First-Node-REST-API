@@ -20,7 +20,7 @@ router.get('/:id', getSubscriber, (req, res) => {
 // Creating one
 router.post('/', async (req, res) => {
   const subscriber = new Subscriber({
-    name: req.body.name,
+    loanTitle: req.body.loanTitle,
     amount: req.body.amount
   })
   try {
@@ -33,11 +33,11 @@ router.post('/', async (req, res) => {
 
 // Updating One
 router.patch('/:id', getSubscriber, async (req, res) => {
-  if (req.body.name != null) {
-    res.subscriber.name = req.body.name
+  if (req.body.loanTitle != null) {
+    res.subscriber.loanTitle = req.body.loanTitle
   }
-  if (req.body.subscribedToChannel != null) {
-    res.subscriber.subscribedToChannel = req.body.subscribedToChannel
+  if (req.body.amount != null) {
+    res.subscriber.amount = req.body.amount
   }
   try {
     const updatedSubscriber = await res.subscriber.save()
